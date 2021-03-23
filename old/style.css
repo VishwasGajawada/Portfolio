@@ -1,5 +1,4 @@
-/* https://www.color-hex.com/color-palette/38337 */
-/* https://css-tricks.com/neumorphism-and-css/ */
+
 /* header  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
@@ -9,14 +8,62 @@
     font-family: 'Roboto',sans-serif;
     text-decoration: none;
     --primary-color :#FEE715FF;
-    --primary-color-light :rgb(212, 203, 118);
     --secondary-color : #101820FF;
     /* -ms-overflow-style: none; */
 }
 ::-webkit-scrollbar{
     display: none;
 }
-
+/*
+.max-width{
+    width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+header{
+    background-color: var(--primary-color);
+    padding: 15px;
+    position: fixed;
+    width: 100% ;
+    padding: 30px 0;
+}
+header .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo a{
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+}
+header .menu li{
+    list-style: none;
+    display: inline-block;
+} 
+header .menu li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 25px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+header .menu li a:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: yellow;
+    height: 20px;
+} 
+*/
 /* header end */
 /* ***************************** header start*****************************  */
 body{
@@ -162,15 +209,11 @@ header ul li a:hover{
 
 .categories .category{
     min-height: 300px;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     border-radius: 10px;
     margin: 20px;
-    padding: 35px;
-    background-color: var(--secondary-color);
-    color: var(--primary-color-light);
+    padding: 15px 10px;
 }
-
-
 #about .content{
     display: flex;
     justify-content: center;
@@ -182,54 +225,25 @@ header ul li a:hover{
     border-radius: 50%;
     margin: 15px;
 }
-.content{
+#education .content{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
-    height: auto;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    padding: 15px;
 }
 #projects{
     display: flex;
     flex-direction: column;
 }
 #projects a{
-    color: var(--primary-color-light);
-}
-.card{
-    margin: 0 20px;
-}
-.card h1{
-    background-color: antiquewhite;
     color: var(--secondary-color);
-    min-height: 100px;
-    width: 150px;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-    font-size: 27px;
 }
-.card p{
-    color: antiquewhite;
-    min-height: 50px;
-    width: 150px;
-    padding: 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius:  0 0 10px 10px;
+#projects iframe{
+    margin: 0 auto;
+    height: 45vw;
+    width: 80vw;
+    overflow-y: hidden;
 }
-.card{
-    box-shadow: 0 4px 8px 0 rgb(212, 203, 118);
-    border-radius: 10px;
-}
+
 
 
 
@@ -243,43 +257,50 @@ footer{
     margin-top: 50px;
     background-color:var(--secondary-color) ;
     width: 100%;
-    /* position: sticky; */ 
-    /* imp */
-    top: 100%; 
-    /*imp*/
+    position: sticky;    /*imp*/
+    top: 100%;           /*imp*/
     color: white;
     bottom: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
 }
 .social .fa{
     color: white;
-    font-size: 30px;
-    transition: all 0.3s ease;
 }
-.social .fa:hover{
-    color: var(--primary-color);
+footer{
+    padding-bottom: 30px;
 }
-
 footer .box{
     flex-basis: 50%;
     padding: 30px 20px;
 }
-.footer-about{
-    width: 100%;
+footer .box h2{
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px 0;
+    display: flex;
 }
 .social{
     display: flex;
-    align-items: center;
-    justify-content:center;
+    justify-content:left;
+    margin: 25px 0 0 0;
 }
 .social a{
     padding: 0 15px;
 }
 
-@media (max-width:650px){
-    #about .content  img{
-        height: 150px;
-        width: 150px;
+@media (max-width:600px){
+    footer{
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    footer .box{
+        border-bottom: 2px solid white;
+    }
+    .contact-form textarea{
+        width: 100%;
     }
 }
 

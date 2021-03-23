@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishwas Gajawada</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="noir_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -16,8 +17,8 @@
             <li class="navitem" id=""><a href="#">Home</a></li>
             <li class="navitem" id=""><a href="#about">About</a></li>
             <li class="navitem" id=""><a href="#education">Education</a></li>
-            <li class="navitem" id=""><a href="#experience">Experience</a></li>
             <li class="navitem" id=""><a href="#projects">Projects</a></li>
+            <li class="navitem" id=""><a href="#experience">Experience</a></li>
             <li class="navitem" id=""><a href="#contact">Contact</a></li>
         </ul>
         <label for="" class="hambur"><i class="fa fa-bars" aria-hidden="true"></i></label>
@@ -26,72 +27,114 @@
     <section class="home" id="home">
        <div>
            <div class="home-content">
-               <div class="text-1">Konnichiwa , I am </div>
+               <div class="text-1">Hello , I am </div>
                <div class="text-2">Vishwas Gajawada .</div>
                <div class="text-3">Student at NITW</div>
            </div>
        </div>
     </section>
+
     <div class="categories">
-        <div id="about" class="category">
+        <div id="about" class="category anchor">
             <h1>About</h1>
             <div class="content">
                 <!-- <div class="pic"> -->
-                    <img src="images/pic_glasses.png" alt="Pic of Me">
+                    <img id="dp" src="images/pic-black-shirt.png" alt="Pic of Me">
                 <!-- </div> -->
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, inventore soluta praesentium ut sunt cumque aperiam magnam? Error repellendus, commodi illo at, numquam doloribus, tenetur non fuga excepturi mollitia illum?</p>
+                <p>Hey , I am Vishwas Gajawada. <br> Currently in my second year of CSE ,BTech at National Institute of Technology, Warangal. <br>Learning Web Development </p>
             </div>
+            <a href="./resume/Vishwas_Gajawada_Resume_2.pdf" download="Vishwas_Gajawada_Resume"><button id="resume">Download my resume</button></a>
+            
+
         </div>
         <div id="education" class="category">
             <h1>Education</h1>
             <div class="content">
-                <ul class="edu-years">
-                    <li>2019-2023</li>
-                    <li>2017-2019</li>
-                    <li>2014-2017</li>
-                </ul>
-                <ul class="edu-places">
-                    <li>NIT Warangal</li>
-                    <li>Sri Chaitanya Junior College</li>
-                    <li>Abhyasa International Residential School</li>
-                </ul>
+                <div class="card">
+                    <div class="card-name"></div>
+                    <h1>NITW</h1>
+                    <p>2019-2023</p>
+                </div>
+                <div class="card">
+                    <div class="card-name"></div>
+                    <h1>Sri Chaitanya</h1>
+                    <p>2017-2019</p>
+                </div>
+                <div class="card">
+                    <div class="card-name"></div>
+                    <h1>Abhyasa</h1>
+                    <p>2014-2017</p>
+                </div>
             </div>
-        </div>
-        <div id="experience" class="category">
-            <h1>Experience</h1>
-            NOTA
         </div>
         <div id="projects" class="category">
             <a href="https://vishwasgajawada.github.io/Projects/"><h1>Projects</h1></a>
             <p>*click to redirect to site</p>
-            <iframe src="https://vishwasgajawada.github.io/Projects/" frameborder="0"></iframe>
+            <div class="content">
+                <a href="https://vishwasgajawada.github.io/Projects/WebDev/Clock/index.html">
+                    <div class="card">
+                        <div class="card-name"></div>
+                        <h1>Digilog</h1>
+                        <p>Clock which shows time both in digital and analog</p>
+                    </div>
+                </a>
+                <a href="https://vishwasgajawada.github.io/Projects/WebDev/Calculator/index.html">
+                    <div class="card">
+                        <div class="card-name"></div>
+                        <h1>Calculator</h1>
+                        <p>Calculator with the ui similar to oneplus</p>
+                    </div>
+                </a>
+                <a href="https://vishwasgajawada.github.io/Projects/WebDev/Tic%20Tac%20Toe/index.html">
+                    <div class="card">
+                        <div class="card-name"></div>
+                        <h1>Tic Tac Toe</h1>
+                        <p>2 Player Tic Tac Toe Game</p>
+                    </div>
+                </a>
+            </div>
+            <!-- <iframe src="https://vishwasgajawada.github.io/Projects/" frameborder="0"></iframe> -->
         </div>
+        <div id="experience" class="category">
+            <h1>Other activities</h1>
+            <div class="content">
+                <div class="card">
+                    <div class="card-name"><h1>JPMC</h1></div>
+                    
+                    <p>Virtual Intern <br>Mar 2021 - Apr 2021</p>
+                </div>
+                <div class="card">
+                    <div class="card-name"><h1>Chegg Expert</h1></div>
+                    
+                    <p>Calculus expert at chegg <br>Sep 2020 - </p>
+                </div>
+                <div class="card">
+                    <div class="card-name"><h1>Painting club</h1></div>
+                    
+                    <p>Executive Member <br>Sep 2019 - Dec 2019</p>
+                </div>
+                <div class="card">
+                    <div class="card-name"><h1>Anime & Comics club</h1></div>
+                    
+                    <p>Executive Member <br>Oct 2019 - Aug 2020</p>
+                </div>
+            </div>
+        </div>
+        
     </div>
    
 
     <footer>
-        <div class="footer-about box">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero mollitia temporibus odio labore unde maiores quis odit sint, distinctio nostrum eius expedita dolore veritatis quam eum nesciunt possimus repellat a!</p>
+        <div class="footer-about box" id="contact">
             <div class="social">
                 <a href="https://www.facebook.com/profile.php?id=100006209597193"><span class="fa fa-facebook"></span></a>
                 <a href="https://www.instagram.com/vishwasgajawada/"><span class="fa fa-instagram"></span></a>
+                <a href="https://www.linkedin.com/in/vishwas-gajawada-016b621a3/"><span class="fa fa-linkedin"></span></a>
                 <a href="https://github.com/VishwasGajawada"><span class="fa fa-github"></span></a>
+                <p><span class="fa fa-phone"></span> 6302643684</p>
             </div>
         </div>
-        <div class="contact box" id="contact">
-            <h2>Contact us</h2>
-            <form class="contact-form" action="mailto:panduvishwas@gmail.com" method="post">
-                <label>Your Name</label>
-                <input type="text" required><br>
-                <label>Email</label>
-                <input type="email" required><br>
-                <label>Your Message</label><br>
-                <textarea  rows="7" cols="50" required></textarea><br>
-                <input type="submit" name="Save" value="Submit" style="cursor: pointer;">
-              </form>
-        </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

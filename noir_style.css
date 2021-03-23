@@ -8,9 +8,15 @@
     box-sizing: border-box;
     font-family: 'Roboto',sans-serif;
     text-decoration: none;
-    --primary-color :#FEE715FF;
-    --primary-color-light :rgb(212, 203, 118);
-    --secondary-color : #101820FF;
+    --gray-1: rgb(239, 243, 245);
+    --gray-2: rgb(207,212,218);
+    --gray-3: rgb(134,142,150);
+    --gray-4: rgb(52,58,64);
+    --gray-5: rgb(33,37,42);
+    --primary-color :#121212;
+    --primary-color-light :var(--gray-5);
+    --secondary-color : white;
+    
     /* -ms-overflow-style: none; */
 }
 ::-webkit-scrollbar{
@@ -21,6 +27,7 @@
 /* ***************************** header start*****************************  */
 body{
     height: 100%;
+    background-color: var(--gray-1);
 }
 header{
     background-color:var(--primary-color);
@@ -29,9 +36,10 @@ header{
     display: flex;
     justify-content: space-between;
     position: fixed;
+    color: var(--secondary-color);
 }
 .logo{
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
     font-size: 35px;
     line-height:80px ;
     padding: 0 100px;
@@ -52,8 +60,8 @@ header ul li a{
     text-transform: uppercase;
     font-size: 17px;
     font-weight: 600;
-    border : 2px solid var(--primary-color);
-    border-radius: 5px;
+    border-bottom : 2px solid var(--primary-color);
+    /* border-radius: 5px; */
     padding: 5px;
     transition: all 0.3s ease;
 }
@@ -61,7 +69,7 @@ header ul li a:hover{
     border-color: var(--secondary-color);
 }
 .hambur{
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
     font-size: 30px;
     line-height: 80px;
     float: right;
@@ -95,7 +103,7 @@ header ul li a:hover{
         flex-direction: column;
         width: 100%;
         height: calc(100vh - 80px);
-        background-color: rgb(197, 183, 56);
+        background-color: var(--primary-color-light);
         top:80px ;
         left:-100%;
         text-align: center;
@@ -103,7 +111,10 @@ header ul li a:hover{
         transition: all 0.3s ease;
     }
     header ul li{
-        width: 100%;
+        width: calc(100% - 50px);
+        border-radius: 10px;
+        
+        transition: all 0.2s ease;
     }
     header ul li a{
         display: block;  /*makes parent i.e full li clickable*/
@@ -111,7 +122,10 @@ header ul li a:hover{
         width: 100%;
     }
     header ul li:hover{
-        background-color: #FEE715FF;
+        /* background-color: var(--gray-4); */
+        background-color: var(--primary-color-light);
+        box-shadow:  10px 10px 15px #1c1f24,
+                    -10px -10px 15px #262b30;
     } 
     .active{
         left:0;
@@ -127,16 +141,21 @@ header ul li a:hover{
     /* do nothing */
 }
 
+/* ***************************** header end*****************************  */
+/* ***************************** content start*****************************  */
+
 .home{
     /* background: url("images/image1.jpg") no-repeat center; */
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     /* height: calc(100vh - 80px); */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
+    /* font-weight: 600; */
+    /* color: white; */
 }
 .home .home-content .text-1{
     font-size: 27px;
@@ -144,7 +163,9 @@ header ul li a:hover{
 .home .home-content .text-2{
     font-size: 40px;
     margin: 5px 0;
-    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    /* color: var(--primary-color); */
 }
 
 @media (max-width:500px){
@@ -154,86 +175,88 @@ header ul li a:hover{
     .home .home-content .text-2{
         font-size: 30px;
         margin: 5px 0;
-        color: var(--primary-color);
+        /* color: var(--primary-color); */
     }
 }
-/* ***************************** header end*****************************  */
-/* ***************************** content start*****************************  */
 
-.categories .category{
-    min-height: 300px;
-    /* border: 2px solid red; */
-    border-radius: 10px;
-    margin: 20px;
-    padding: 35px;
-    background-color: var(--secondary-color);
-    color: var(--primary-color-light);
-}
-
-
-#about .content{
+.category{
+    min-height: 150px;
+    padding: 100px 35px 0 35px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-#about .content  img{
-    height: 280px;
-    width: 280px;
+.category h1{
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+#dp{
+    width: 350px;
+    margin: 25px;
     border-radius: 50%;
-    margin: 15px;
+    box-shadow:  16px 16px 15px #c2bfbf,
+                -16px -16px 15px #ffffff;
+}
+#resume{
+    background-color: var(--gray-5);
+    color: var(--secondary-color);
+    padding: 20px;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 5px;
+    transition: 0.2s all ease;
+}
+#resume:hover{
+    cursor: pointer;
+    box-shadow:  8px 8px 0px #1c1f24,
+                -8px -8px 0px #262b30;
 }
 .content{
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    height: auto;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    padding: 15px;
-}
-#projects{
-    display: flex;
+    justify-content: center;
     flex-direction: column;
 }
-#projects a{
-    color: var(--primary-color-light);
+#about .content{
+    flex-direction: row;
 }
 .card{
-    margin: 0 20px;
+    /* border: 2px solid var(--gray-5);
+    border-radius: 5px; */
+    border-radius: 20px;
+    background: var(--gray-1);
+    box-shadow:  16px 16px 15px #c2bfbf,
+                -16px -16px 15px #ffffff;
+    padding: 15px;
+    margin: 15px;
+    transition: 0.3s all ease;
+    /* height: 300px; */
 }
-.card h1{
-    background-color: antiquewhite;
-    color: var(--secondary-color);
-    min-height: 100px;
-    width: 150px;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-    font-size: 27px;
+#projects .content a{
+    color: var(--primary-color);
 }
-.card p{
-    color: antiquewhite;
-    min-height: 50px;
-    width: 150px;
-    padding: 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius:  0 0 10px 10px;
-}
-.card{
-    box-shadow: 0 4px 8px 0 rgb(212, 203, 118);
-    border-radius: 10px;
+#projects .content a .card:hover{
+    box-shadow:  3px 3px 9px #c2bfbf,
+                -3px -3px 9px #ffffff;
+    /* box-shadow: none; */
 }
 
-
-
-
+@media (max-width:650px){
+    #about .content  img{
+        width: 150px;
+    }
+    #about .content{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width:815px){
+    #about .content  img{
+        /* height: 150px; */
+        width: 250px;
+    }
+}
 /* ***************************** contetn end*****************************  */
 /***************************** footer start *****************************  */
 body{
@@ -241,23 +264,34 @@ body{
 }
 footer{
     margin-top: 50px;
-    background-color:var(--secondary-color) ;
+    background-color:var(--primary-color) ;
     width: 100%;
     /* position: sticky; */ 
     /* imp */
     top: 100%; 
     /*imp*/
-    color: white;
+    color: var(--primary-color);
     bottom: 0;
     left: 0;
 }
-.social .fa{
+.social a .fa{
     color: white;
     font-size: 30px;
     transition: all 0.3s ease;
 }
-.social .fa:hover{
-    color: var(--primary-color);
+.social a{
+    padding: 10px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.social a:hover{
+    /* color: var(--primary-color); */
+    background-color: #1c1f24;
+    box-shadow:  10px 10px 5px #0f0f0f,
+                -10px -10px 5px #151515;
+
 }
 
 footer .box{
@@ -272,15 +306,6 @@ footer .box{
     align-items: center;
     justify-content:center;
 }
-.social a{
-    padding: 0 15px;
-}
 
-@media (max-width:650px){
-    #about .content  img{
-        height: 150px;
-        width: 150px;
-    }
-}
 
 /* footer end  */
