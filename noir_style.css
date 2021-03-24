@@ -2,6 +2,7 @@
 /* https://css-tricks.com/neumorphism-and-css/ */
 /* header  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 *{
     margin:0;
     padding: 0;
@@ -16,13 +17,19 @@
     --primary-color :#121212;
     --primary-color-light :var(--gray-5);
     --secondary-color : white;
-    
+    --purple : rgb(147, 61, 228);
     /* -ms-overflow-style: none; */
 }
 ::-webkit-scrollbar{
     display: none;
 }
-
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 /* header end */
 /* ***************************** header start*****************************  */
 body{
@@ -86,7 +93,7 @@ header ul li a:hover{
     }
 }
 
-@media (max-width:1010px){
+@media (max-width:900px){
     
     .hambur{
         display:block;
@@ -167,7 +174,15 @@ header ul li a:hover{
     font-weight: 600;
     /* color: var(--primary-color); */
 }
-
+.down{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    /* font-size: 30px; */
+}
+.invisible{
+    display: none;
+}
 @media (max-width:500px){
     .home .home-content .text-1{
         font-size: 20px;
@@ -190,6 +205,7 @@ header ul li a:hover{
 .category h1{
     text-transform: uppercase;
     color: var(--primary-color);
+    font-family: 'Abril Fatface', cursive;
 }
 #dp{
     width: 350px;
@@ -216,7 +232,9 @@ header ul li a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    /* nice wrap  */
+    flex-wrap: wrap;
+    /* flex-direction: column; */
 }
 #about .content{
     flex-direction: row;
@@ -227,36 +245,66 @@ header ul li a:hover{
     border-radius: 20px;
     background: var(--gray-1);
     box-shadow:  16px 16px 15px #c2bfbf,
-                -16px -16px 15px #ffffff;
+                -16px -16px 15px #ffffff; 
     padding: 15px;
     margin: 15px;
     transition: 0.3s all ease;
-    /* height: 300px; */
+    min-height: 200px;
+    /* min-width: 150px; */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
 }
+.card-name h1{
+    text-transform: none;
+    font-family: 'Roboto',sans-serif;
+}
+.card a{
+    width: auto;
+}
+.using{
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+}
+.using p{
+    background-color: var(--purple);
+    margin: 0 5px;
+    padding: 5px 7px;
+    border-radius: 5px;
+    color: white;
+}
+
 #projects .content a{
     color: var(--primary-color);
 }
+
 #projects .content a .card:hover{
     box-shadow:  3px 3px 9px #c2bfbf,
                 -3px -3px 9px #ffffff;
     /* box-shadow: none; */
 }
 
-@media (max-width:650px){
+@media (max-width:815px){
     #about .content  img{
-        width: 150px;
+        width: 250px;
     }
     #about .content{
-        flex-direction: column;
         text-align: center;
     }
 }
-@media (max-width:815px){
+@media (max-width:650px){
     #about .content  img{
-        /* height: 150px; */
-        width: 250px;
+        width: 200px;
+    }
+    #about .content{
+        flex-direction: column;
     }
 }
+
 /* ***************************** contetn end*****************************  */
 /***************************** footer start *****************************  */
 body{
@@ -300,12 +348,23 @@ footer .box{
 }
 .footer-about{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .social{
     display: flex;
     align-items: center;
     justify-content:center;
 }
-
-
+.contact{
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.contact a{
+    color: var(--secondary-color);
+    margin: 5px 0;
+}
 /* footer end  */
