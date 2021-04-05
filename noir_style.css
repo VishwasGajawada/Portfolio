@@ -20,9 +20,13 @@
     --purple : rgb(147, 61, 228);
     /* -ms-overflow-style: none; */
 }
+html {
+    scroll-behavior: smooth;
+}
 ::-webkit-scrollbar{
     display: none;
 }
+
 input,
 textarea,
 button,
