@@ -14,8 +14,9 @@
     --gray-3: rgb(134,142,150);
     --gray-4: rgb(52,58,64);
     --gray-5: rgb(33,37,42);
+    --gray-6: #1F2023;
     --primary-color :#121212;
-    --primary-color-light :var(--gray-5);
+    --primary-color-light :var(--gray-6);
     --secondary-color : white;
     --purple : rgb(147, 61, 228);
     /* -ms-overflow-style: none; */
@@ -41,12 +42,17 @@ body{
     background-color: var(--gray-1);
 }
 header{
-    background-color:var(--primary-color);
+    /* background-color:var(--primary-color); */
+
     height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    /* position: sticky; */
     position: fixed;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    
     color: var(--secondary-color);
 }
 .logo{
@@ -107,13 +113,13 @@ header ul li a:hover{
         font-size: 30px;
     }
     header ul{
-        position: absolute;
-        display: flex;
+        position: fixed;
+        /* display: flex;
         align-items: center;
         justify-content: space-around;
-        flex-direction: column;
+        flex-direction: column; */
         width: 100%;
-        height: calc(100vh - 80px);
+        height: 100vh;
         background-color: var(--primary-color-light);
         top:80px ;
         left:-100%;
@@ -122,9 +128,13 @@ header ul li a:hover{
         transition: all 0.3s ease;
     }
     header ul li{
-        width: calc(100% - 50px);
-        border-radius: 10px;
-        
+        /* width: calc(100% - 50px); */
+        width:100%;
+        /* border-radius: 10px; */
+        display:block;
+        margin: 50px 0 0 0;
+        line-height:30px;
+        padding:10px 0;
         transition: all 0.2s ease;
     }
     header ul li a{
@@ -140,12 +150,16 @@ header ul li a:hover{
     } 
     .active{
         left:0;
-        z-index: 1000;
+        z-index: 100;
     }
+    
     .hide{
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
+}
+.scrolling-nav{
+    background-color:var(--primary-color);
 }
 /* to prevent web site from rotating */
 @media screen and (orientation : landscape){
@@ -156,19 +170,42 @@ header ul li a:hover{
 /* ***************************** content start*****************************  */
 
 .home{
-    /* background: url("images/image1.jpg") no-repeat center; */
-    background-color: var(--primary-color);
+    /* background: url("images/mountain.jpg") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover; */
+    /* background-color: var(--primary-color); */
     color: var(--secondary-color);
-    /* height: calc(100vh - 80px); */
+    color:white;
+    font-weight: 600;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* font-weight: 600; */
-    /* color: white; */
+    position: relative;
 }
-.home .home-content .text-1{
+
+.home::before{
+    content:'';
+    position: absolute;
+    background: url("images/mountain.jpg") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.95;
+}
+.home-child{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home .home-content .text-1,.text-3{
     font-size: 27px;
 }
 .home .home-content .text-2{
@@ -176,13 +213,18 @@ header ul li a:hover{
     margin: 5px 0;
     text-transform: uppercase;
     font-weight: 600;
-    /* color: var(--primary-color); */
+}
+.text-1 span,.text-2 span,.text-3 span{
+    display: inline;
+    color:black;
+    background:var(--gray-1);
+    padding:0 10px;
 }
 .down{
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    /* font-size: 30px; */
+    /* position:absolute; */
+    margin-top:50px;
+    bottom: 0;
+    margin-bottom: 15px;
 }
 .invisible{
     display: none;
@@ -276,7 +318,7 @@ header ul li a:hover{
 }
 .using p{
     background-color: var(--purple);
-    margin: 0 5px;
+    margin: 5px;
     padding: 5px 7px;
     border-radius: 5px;
     color: white;
