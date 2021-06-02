@@ -302,6 +302,7 @@ header ul li a:hover{
     transition: 0.3s all ease;
     /* min-height: 200px; */
     min-width: 150px;
+    max-width: 600px;
     height:auto;
     display: flex;
     flex-direction: column;
@@ -340,7 +341,7 @@ header ul li a:hover{
 .bottom{
     text-transform: none;
     font-family: 'Roboto',sans-serif;
-    transform: translateY(250px);
+    transform: translateY(350px);
     transition:all 0.2s ease;
     display:flex;
     background :  var(--gray-1);
@@ -375,17 +376,23 @@ header ul li a:hover{
 .proj-links{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: center;
 }
 .proj-links a i{
     border-radius: 5px;
     border:2px solid black;
     padding:10px 25px;
+    margin:10px;
     font-size:27px;
     transition: all 0.3s ease;
 }
 .proj-links a:hover i{
     background-color:rgb(64, 199, 64);
+}
+.quizzo{
+    background : url('images/projects/quizzo.png') no-repeat center;
+    background-size: auto 100%;
 }
 .color-notes{
     background : url('images/projects/notes.png') no-repeat center;
