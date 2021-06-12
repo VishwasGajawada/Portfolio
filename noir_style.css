@@ -250,9 +250,10 @@ header ul li a:hover{
     flex-direction: column;
 }
 .category h1{
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: var(--primary-color);
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Poppins', cursive;
+    /* font-family: 'Abril Fatface', cursive; */
 }
 #dp{
     width: 350px;
@@ -383,32 +384,37 @@ header ul li a:hover{
     border-radius: 5px;
     border:2px solid black;
     padding:10px 25px;
-    margin:10px;
+    margin:20px 10px;
     font-size:27px;
     transition: all 0.3s ease;
 }
 .proj-links a:hover i{
     background-color:rgb(64, 199, 64);
 }
+
 .quizzo{
     background : url('images/projects/quizzo.png') no-repeat center;
-    background-size: auto 100%;
+    /* background-size: auto 100%; */
 }
 .color-notes{
     background : url('images/projects/notes.png') no-repeat center;
-    background-size: auto 100%;
+    /* background-size: auto 100%; */
 }
 .calculator{
     background : url('images/projects/calculator.png') no-repeat center;
-    background-size: auto 100%;
+    /* background-size: auto 100%; */
 }
 .digilog{
     background : url('images/projects/clock.png') no-repeat center;
-    background-size: auto 100%;
+    /* background-size: auto 100%; */
 }
 .tictactoe{
     background : url('images/projects/tictactoe.png') no-repeat center;
-    background-size: auto 85%;
+    /* background-size: auto 85%; */
+}
+
+.proj{
+    background-size: 60% auto;    
 }
 #projects .content a{
     color: var(--primary-color);
@@ -437,6 +443,9 @@ header ul li a:hover{
     }
 }
 @media (max-width:500px){
+    h1{
+        font-size:25px;
+    }
     .proj .card-name,.bottom{
         transform:translateY(0px);
     }
