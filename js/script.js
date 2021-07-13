@@ -31,3 +31,5 @@ for(const ele of nav_item){
         // header.classList.toggle('over-scroll');
     })
 }
+
+scrollfunc(); //if user is in middle of page during reload then also offset must be checked

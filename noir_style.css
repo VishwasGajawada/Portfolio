@@ -117,7 +117,7 @@ header ul li a:hover{
         position: fixed;
         /* display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: column; */
         width: 100%;
         height: 100vh;
@@ -127,11 +127,12 @@ header ul li a:hover{
         text-align: center;
         cursor: pointer;
         transition: all 0.3s ease;
+        overflow: scroll;
     }
     header ul li{
         /* width: calc(100% - 50px); */
         width:100%;
-        /* border-radius: 10px; */
+        border-radius: 10px;
         display:block;
         margin: 50px 0 0 0;
         line-height:30px;
@@ -139,15 +140,13 @@ header ul li a:hover{
         transition: all 0.2s ease;
     }
     header ul li a{
-        display: block;  /*makes parent i.e full li clickable*/
+        /* makes parent i.e full li clickable */
+        display: block;  
         border: 0px;
         width: 100%;
     }
     header ul li:hover{
-        /* background-color: var(--gray-4); */
-        background-color: var(--primary-color-light);
-        box-shadow:  10px 10px 15px #1c1f24,
-                    -10px -10px 15px #262b30;
+        background-color: var(--gray-4);
     } 
     .active{
         left:0;
@@ -259,8 +258,8 @@ header ul li a:hover{
     width: 350px;
     margin: 25px;
     border-radius: 50%;
-    box-shadow:  16px 16px 15px #c2bfbf,
-                -16px -16px 15px #ffffff;
+    box-shadow:  12px 12px 12px #c2bfbf,
+                -12px -12px 12px #ffffff;
 }
 #resume{
     background-color: var(--gray-5);
@@ -282,18 +281,15 @@ header ul li a:hover{
     justify-content: center;
     /* nice wrap  */
     flex-wrap: wrap;
-    /* flex-direction: column; */
 }
 #about .content{
     flex-direction: row;
 }
 #about p{
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 .card{
-    /* border: 2px solid var(--gray-5);
-    border-radius: 5px; */
-    /* width: 200px; */
     border-radius: 20px;
     background: var(--gray-1);
     box-shadow:  16px 16px 15px #c2bfbf,
@@ -301,10 +297,8 @@ header ul li a:hover{
     padding: 25px;
     margin: 15px;
     transition: 0.3s all ease;
-    /* min-height: 200px; */
     min-width: 150px;
     max-width: 600px;
-    height:auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,13 +310,17 @@ header ul li a:hover{
 
 .proj{
     padding:0;
+    width:600px;
+    max-width:80%;
+    overflow-y:scroll;
 }
 .bottom,.proj .card-name,.card-name-other{
     width: 100%;
     padding:25px;
 }
 .proj .card-name{
-    background-color: var(--gray-3);
+    /* background-color: var(--gray-3); */
+    background-color:rgb(240, 229, 243);
 }
 .proj .card-name{
     width: 100%;
@@ -330,19 +328,12 @@ header ul li a:hover{
 .proj .card-name{
     text-transform: none;
     font-family: 'Roboto',sans-serif;
-    transform: translateY(-150px);
     margin:auto 5px;
     transition:all 0.45s ease;
 }
-.proj:hover .card-name{
-    width: 100%;
-    transform: translateY(0px);
-}
-
 .bottom{
     text-transform: none;
     font-family: 'Roboto',sans-serif;
-    transform: translateY(350px);
     transition:all 0.2s ease;
     display:flex;
     background :  var(--gray-1);
@@ -352,10 +343,6 @@ header ul li a:hover{
 }
 .bottom > *{
     margin-top:10px;
-}
-.proj:hover .bottom{
-    width: 100%;
-    transform: translateY(0px);
 }
 .card a{
     width: auto;
@@ -392,27 +379,6 @@ header ul li a:hover{
     background-color:rgb(64, 199, 64);
 }
 
-.quizzo{
-    background : url('images/projects/quizzo.png') no-repeat center;
-    /* background-size: auto 100%; */
-}
-.color-notes{
-    background : url('images/projects/notes.png') no-repeat center;
-    /* background-size: auto 100%; */
-}
-.calculator{
-    background : url('images/projects/calculator.png') no-repeat center;
-    /* background-size: auto 100%; */
-}
-.digilog{
-    background : url('images/projects/clock.png') no-repeat center;
-    /* background-size: auto 100%; */
-}
-.tictactoe{
-    background : url('images/projects/tictactoe.png') no-repeat center;
-    /* background-size: auto 85%; */
-}
-
 .proj{
     background-size: 60% auto;    
 }
@@ -446,8 +412,8 @@ header ul li a:hover{
     h1{
         font-size:25px;
     }
-    .proj .card-name,.bottom{
-        transform:translateY(0px);
+    .proj{
+        width:90%;
     }
 }
 
@@ -481,10 +447,8 @@ footer{
     text-align: center;
 }
 .social a:hover{
-    /* color: var(--primary-color); */
-    background-color: #1c1f24;
-    box-shadow:  10px 10px 5px #0f0f0f,
-                -10px -10px 5px #151515;
+    
+    border-bottom: 1px solid white;
 
 }
 
