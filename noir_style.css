@@ -309,7 +309,7 @@ header ul li a:hover{
 .proj{
     padding:0;
     width:600px;
-    max-width:80%;
+    /* max-width:80%; */
     overflow-y:scroll;
 }
 .bottom,.proj .card-name,.card-name-other{
@@ -405,8 +405,6 @@ header ul li a:hover{
     #about .content{
         flex-direction: column;
     }
-}
-@media (max-width:500px){
     h1{
         font-size:25px;
     }
