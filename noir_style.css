@@ -134,7 +134,6 @@ header ul li a:hover{
         width:100%;
         border-radius: 10px;
         display:block;
-        margin: 50px 0 0 0;
         line-height:30px;
         padding:10px 0;
         transition: all 0.2s ease;
@@ -203,10 +202,10 @@ header ul li a:hover{
     align-items: center;
     flex-direction: column;
 }
-.home .home-content .text-1,.text-3{
+.home-content .text-1,.text-3{
     font-size: 27px;
 }
-.home .home-content .text-2{
+.home-content .text-2{
     font-size: 40px;
     margin: 5px 0;
     text-transform: uppercase;
@@ -228,12 +227,14 @@ header ul li a:hover{
     display: none;
 }
 @media (max-width:500px){
-    .home .home-content .text-1{
+    .home-content .text-1,.text-3{
         font-size: 20px;
+        text-align: center;
     }
-    .home .home-content .text-2{
+    .home-content .text-2{
         font-size: 30px;
         margin: 5px 0;
+        text-align: center;
         /* color: var(--primary-color); */
     }
 }
